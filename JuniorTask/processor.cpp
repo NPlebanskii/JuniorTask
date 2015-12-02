@@ -30,7 +30,6 @@ void Processor::saveData()
     settings.setValue("count", mCount);
 }
 
-// Loads data for mText and mCount
 void Processor::loadData()
 {
     QSettings settings("HKEY_CURRENT_USER\\Software\\Test",
@@ -54,8 +53,6 @@ void Processor::loadData()
     }
 }
 
-// Parses JSON object, saves parsed object in members of class,
-// saves members to register and prints out members
 void Processor::parseJSON(QNetworkReply* response)
 {
     QByteArray data;
